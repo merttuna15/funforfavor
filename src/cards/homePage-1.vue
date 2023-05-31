@@ -2,28 +2,27 @@
   <v-container fluid>
     <v-card class="card">
       <v-row no-gutters>
-        <v-col cols="6" class="text-center">
+        <v-col cols="12" md="6" class="text-center">
           <v-card-text>
             <div class="text-container">
               <p class="centered-text">Dayanışma Festivali yardımsever, üretken ve sevginin ekseninde bir toplumsal bilincin gelişmesini sağlamak amacıyla 20’den fazla sanatçıyı, sanatı ve sanatseveri dopdolu bir programla 23 Haziran Cuma günü Club Mirador’da buluşturuyor!</p>
               <p class="centered-text">Festivalimiz kendi mesleklerinde çok başarılı olmalarının yanı sıra toplumsal konulara duyarlılık göstermiş, empati ruhunun yaygınlaşmasına katkıda bulunmuş, sosyal sorumluluk projelerinde istikrarlı biçimde yer almış ve deprem sürecinde seferber olmuş sanatçılara ve müzisyenlere teşekkür etmek amacıyla düzenlenen Dayanışma Ödülleri'ne ve iki ayrı sahnede farklı müzikal tarzlarda eş zamanlı olarak gerçekleşecek konser programına ev sahipliği yapacaktır.</p>
               <p class="centered-text">Aktivite stantları, interaktif etkinlikler & oyunlar, bilim, sanat ve zanaat atölyeleri, resim & çizim alanları, yoga & meditasyon bölgeleri ve havuz aktiviteleri müzik ve sanata eşlik edecektir.</p>
               <p class="centered-text">*Festivalimizde elde edilen tüm gelirler deprem bölgesinde tarifsiz kayıplar vermiş insanlarımıza destek olmak amacıyla Ahbap Derneği’ne ve İhtiyaç Haritası'na bağışlanacaktır.</p>
-                <p class="centered-text">#funforfavor</p>
-          <v-icon>mdi-ticket</v-icon>
+              <p class="centered-text">#funforfavor</p>
+              <v-icon>mdi-ticket</v-icon>
               <v-btn outlined href="https://biletino.com/tr/e-nkr/dayanisma-festivali/">Bilet Almak İçin</v-btn>
-          <v-icon>mdi-ticket</v-icon>
+              <v-icon>mdi-ticket</v-icon>
             </div>
           </v-card-text>
         </v-col> 
-        <v-col cols="6">
+        <v-col cols="12" md="6">
           <v-img src="@/assets/inner-1.jpg" class="image"></v-img>
         </v-col>
       </v-row>
     </v-card>
   </v-container>
 </template>
-
 
 <script>
 export default {
@@ -36,19 +35,21 @@ export default {
 
 <style scoped>
 .card {
-  width: 70%;
-  height: 70vh;
-  margin-left: 15% ;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 16px;
 }
 
-
 .image {
-  width: 99%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  margin-top: 16px;
 }
 
 .text-center {
@@ -59,5 +60,16 @@ export default {
 
 .centered-text {
   text-align: center;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .text-container {
+    margin-right: 16px;
+  }
 }
 </style>
