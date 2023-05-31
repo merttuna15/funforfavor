@@ -1,4 +1,4 @@
-# fanforfavorvue
+# fanforfavor.org
 
 ## Project setup
 ```
