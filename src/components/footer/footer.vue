@@ -1,55 +1,49 @@
 <template>
-    <v-container class="container">
-      <v-row>
-        <v-col class="footer-column">
-          <v-img src="@/assets/footer.png" alt="Logo" class="logo-image"></v-img>
+    <v-container fluid>
+      <v-row align="center" justify="center" class="footer-row">
+        <v-col cols="12" md="2">
+          <div class="text-center">
+            <h4 class="footer-title">İletişim</h4>
+            <p class="footer-text">
+              E-posta: iletisim@funforfavor.org
+            </p>
+          </div>
         </v-col>
-        <v-col class="footer-column; mt-4">
-          <h4 class="black--text">İletişim</h4>
-          <p class="black--text">
-            E-posta: iletisim@funforfavor.org<br>
-          </p>
-        </v-col>
-        <v-col class="footer-column; mt-4">
-          <h4 class="black--text">Sosyal Medya</h4>
-          <v-btn icon class="mr-2" href="https://www.instagram.com/funforfavor/">
-            <v-icon size="24">mdi-instagram</v-icon>
-          </v-btn>
-          <v-btn icon class="mr-2" href="https://biletino.com/tr/u-jfvc/fun-for-favor/">
-            <v-icon size="24">mdi-ticket</v-icon>
-          </v-btn>
+        <v-col cols="12" md="2">
+          <div class="text-center">
+            <h4 class="footer-title">Sosyal Medya</h4>
+            <v-row justify="center" align="center">
+              <v-btn icon href="https://www.instagram.com/funforfavor/" class="mr-2">
+                <v-icon size="20">mdi-instagram</v-icon>
+              </v-btn>
+              <v-btn icon href="https://biletino.com/tr/u-jfvc/fun-for-favor/">
+                <v-icon size="20">mdi-ticket</v-icon>
+              </v-btn>
+            </v-row>
+          </div>
         </v-col>
       </v-row>
     </v-container>
 </template>
 
-<script>
-export default {
-  name: "footerCom",
-  data() {
-    return {
-      isFooterVisible: false,
-    };
-  },
+<style>
+.footer {
+  text-align: center;
 }
-</script>
 
-<style scoped>
-#footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
+.footer-row {
   justify-content: center;
 }
 
-.logo-image {
-  max-width: 250px;
-  max-height: 80px;
-}
-
-.container {
-  margin-left: 17%;
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
+
+<script>
+export default {
+  name: 'FooterComp'
+}
+</script>

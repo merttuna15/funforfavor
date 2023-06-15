@@ -1,20 +1,46 @@
 <template>
   <div class="page">
-  <eventCard ></eventCard>
+    <homePage1></homePage1>
+    <v-container class="text-container">
+      <v-img
+        src="@/assets/inner-1.jpg"
+        class="centered-image"
+        contain
+        :max-width="getImageMaxWidth"
+        aspect-ratio="1"
+      ></v-img>
+    </v-container>
   </div>
 </template>
 
 <script>
-import eventCard from '@/cards/eventCard'
+import homePage1 from '@/cards/homePage-1'
 
 export default {
-  name: "eventPage",
-    components: {eventCard}
+  name: "eventsPage",
+  components: {
+    homePage1,
+  },
+  computed: {
+    getImageMaxWidth() {
+      if (this.$vuetify.breakpoint.smAndUp) {
+        return "50%";
+      } else {
+        return "100%";
+      }
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .page {
   background-color: #38b22f;
+}
+
+.centered-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 </style>

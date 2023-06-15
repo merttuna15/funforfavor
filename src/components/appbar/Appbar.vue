@@ -1,37 +1,35 @@
 <template>
   <div>
-    <v-container>
-      <v-toolbar flat class="mainHeader" hide-on-scroll scroll-target="#scrolling-techniques-4">
+    <v-container fluid>
+      <v-toolbar flat class="mainHeader" hide-on-scroll >
         <router-link to="/">
             <img src="@/assets/funforfavorlogo.png" alt="Logo" style="max-width: 250px; max-height: 220px;" />
         </router-link>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-xs-only">
-         <v-list>
-  <v-list-item-group class="d-flex">
-    <v-list-item to="/" link class="mr-4">
-      <v-list-item-content>
-        <v-list-item-title>ANASAYFA</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-
-    <v-list-item to="/hakkimizda" link class="mr-4">
-      <v-list-item-content>
-        <v-list-item-title>HAKKIMIZDA</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-
-    <v-list-item to="/etkinlikler" link>
-      <v-list-item-content>
-        <v-list-item-title>DAYANIŞMA FESTİVALİ</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-  </v-list-item-group>
-</v-list>
-          <!-- <v-btn class="black--text" text style="text-decoration: none;">
-            <router-link to="/iletisim" style="text-decoration: none;"><span style="color: black;">İletişim</span></router-link>
-          </v-btn> -->
-        </v-toolbar-items>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn icon v-bind="attrs" v-on="on">
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item to="/" link class="mr-4" active-class="custom-active-class">
+              <v-list-item-content>
+                <v-list-item-title>ANASAYFA</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item to="/hakkimizda" link class="mr-4" active-class="custom-active-class">
+              <v-list-item-content>
+                <v-list-item-title>HAKKIMIZDA</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item to="/etkinlikler" link active-class="custom-active-class">
+              <v-list-item-content>
+                <v-list-item-title>DAYANIŞMA FESTİVALİ</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-toolbar>
     </v-container>
   </div>
@@ -62,5 +60,9 @@ export default {
   color: black !important; /* Butonun metin rengini siyah olarak ayarlayın */
 }
 
-
+@media (min-width: 600px) {
+  .hidden-xs-only {
+    display: none !important;
+  }
+}
 </style>
