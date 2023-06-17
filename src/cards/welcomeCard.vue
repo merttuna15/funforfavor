@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-card class="card">
-      <v-img src="@/assets/header-1.jpg" class="image" max-width="100%" height="auto"></v-img>
+      <v-img src="@/assets/BILETINO-17-HAZIRAN.jpg" class="image" max-width="100%" height="auto"></v-img>
     </v-card>
   </v-container>
 </template>

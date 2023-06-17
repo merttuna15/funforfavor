@@ -3,7 +3,7 @@
     <homePage1></homePage1>
     <v-container class="text-container">
       <v-img
-        src="@/assets/inner-1.jpg"
+        src="@/assets/DUYURU-2-17-HAZIRAN.jpg"
         class="centered-image"
         contain
         :max-width="getImageMaxWidth"
